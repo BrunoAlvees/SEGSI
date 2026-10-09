@@ -1,0 +1,69 @@
+# Imagem fornecida para o laboratorio de BitLocker (manter apenas localmente)
+/docs/exercicios/imgWinBitlocker*
+
+# Imagens de discos, maquinas virtuais e ficheiros de memoria
+*.iso
+*.img
+*.vhd
+*.vhdx
+*.vmdk
+*.vdi
+*.qcow
+*.qcow2
+*.ova
+*.ovf
+*.vmem
+*.vmss
+*.vmsn
+*.dmp
+
+# Credenciais e configuracao privada
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.key
+*.pfx
+*.p12
+id_rsa
+id_ed25519
+.aws/
+.ssh/
+
+# Ambientes Python e caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Dependencias locais
+node_modules/
+
+# Ficheiros temporarios, logs e resultados intermédios
+/tmp/
+/temp/
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+~$*
+.~lock.*#
+
+# Configuracao pessoal dos editores e ficheiros do sistema
+.claude/
+.codex/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Os PDFs, relatorios e capturas de laboratorio continuam versionados.
+# Este ficheiro nao remove ficheiros ja presentes no historico Git.
