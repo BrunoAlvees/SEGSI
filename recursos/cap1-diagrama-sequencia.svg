@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="mR" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#b03a2e"/>
+    </marker>
+    <marker id="mB" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#1f618d"/>
+    </marker>
+  </defs>
+
+  <!-- Cabecalhos dos atores -->
+  <rect x="80" y="18" width="200" height="40" rx="5" fill="#ffffff" stroke="#34495e" stroke-width="2"/>
+  <text x="180" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">Cliente</text>
+  <text x="180" y="52" text-anchor="middle" font-size="11" fill="#1f618d">192.168.170.130</text>
+
+  <rect x="440" y="18" width="200" height="40" rx="5" fill="#ffffff" stroke="#34495e" stroke-width="2"/>
+  <text x="540" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">Servidor (DC)</text>
+  <text x="540" y="52" text-anchor="middle" font-size="11" fill="#b03a2e">192.168.170.132 : 389</text>
+
+  <!-- Linhas de vida -->
+  <line x1="180" y1="58" x2="180" y2="700" stroke="#aeb6bf" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="540" y1="58" x2="540" y2="700" stroke="#aeb6bf" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- ============ LIGACAO 1 ============ -->
+  <rect x="150" y="72" width="420" height="150" rx="6" fill="none" stroke="#7f8c8d" stroke-width="1.3" stroke-dasharray="6,3"/>
+  <rect x="150" y="72" width="235" height="20" rx="3" fill="#d5dbdb"/>
+  <text x="158" y="86" font-size="11" font-weight="700" fill="#2c3e50">LIGAÇÃO 1 (porta 50442), frames 1 a 8</text>
+
+  <line x1="180" y1="108" x2="533" y2="108" stroke="#b03a2e" stroke-width="2" marker-end="url(#mR)"/>
+  <text x="358" y="103" text-anchor="middle" font-size="10" fill="#333">SYN / SYN,ACK / ACK  (frames 1 a 3)</text>
+  <line x1="540" y1="124" x2="187" y2="124" stroke="#1f618d" stroke-width="1.2" marker-end="url(#mB)"/>
+
+  <line x1="180" y1="150" x2="533" y2="150" stroke="#b03a2e" stroke-width="2.5" marker-end="url(#mR)"/>
+  <text x="358" y="145" text-anchor="middle" font-size="11" font-weight="700" fill="#b03a2e">bindRequest simple: Bob + password em claro</text>
+  <text x="358" y="162" text-anchor="middle" font-size="10" fill="#777">"!!QAZ22wsx"  (frame 4)</text>
+  <line x1="540" y1="178" x2="187" y2="178" stroke="#1f618d" stroke-width="2" marker-end="url(#mB)"/>
+  <text x="360" y="173" text-anchor="middle" font-size="11" fill="#333">bindResponse success  (frame 5)</text>
+
+  <line x1="180" y1="204" x2="533" y2="204" stroke="#b03a2e" stroke-width="2" marker-end="url(#mR)"/>
+  <text x="300" y="199" text-anchor="middle" font-size="10" fill="#333">FIN,ACK (6)</text>
+  <line x1="540" y1="216" x2="187" y2="216" stroke="#1f618d" stroke-width="2" marker-end="url(#mB)"/>
+  <text x="300" y="229" text-anchor="middle" font-size="10" fill="#333">RST,ACK (8) fecha logo</text>
+
+  <!-- ============ LIGACAO 2 ============ -->
+  <rect x="150" y="238" width="420" height="440" rx="6" fill="none" stroke="#7f8c8d" stroke-width="1.3" stroke-dasharray="6,3"/>
+  <rect x="150" y="238" width="250" height="20" rx="3" fill="#d5dbdb"/>
+  <text x="158" y="252" font-size="11" font-weight="700" fill="#2c3e50">LIGAÇÃO 2 (porta 50447), frames 9 a 286</text>
+
+  <line x1="180" y1="276" x2="533" y2="276" stroke="#b03a2e" stroke-width="2" marker-end="url(#mR)"/>
+  <text x="358" y="271" text-anchor="middle" font-size="10" fill="#333">SYN / SYN,ACK / ACK  (frames 9 a 11)</text>
+  <line x1="540" y1="292" x2="187" y2="292" stroke="#1f618d" stroke-width="1.2" marker-end="url(#mB)"/>
+
+  <line x1="180" y1="320" x2="533" y2="320" stroke="#b03a2e" stroke-width="2.5" marker-end="url(#mR)"/>
+  <text x="358" y="315" text-anchor="middle" font-size="11" font-weight="700" fill="#b03a2e">bindRequest simple: Bob + password OUTRA VEZ</text>
+  <text x="358" y="332" text-anchor="middle" font-size="10" fill="#777">"!!QAZ22wsx" em claro  (frame 12)</text>
+  <line x1="540" y1="348" x2="187" y2="348" stroke="#1f618d" stroke-width="2" marker-end="url(#mB)"/>
+  <text x="360" y="343" text-anchor="middle" font-size="11" fill="#333">bindResponse success  (frame 13)</text>
+
+  <line x1="180" y1="384" x2="533" y2="384" stroke="#b03a2e" stroke-width="2" marker-end="url(#mR)"/>
+  <text x="358" y="379" text-anchor="middle" font-size="11" fill="#333">searchRequest (rootDSE, schema, árvore)</text>
+  <line x1="540" y1="406" x2="187" y2="406" stroke="#1f618d" stroke-width="2" marker-end="url(#mB)"/>
+  <text x="358" y="401" text-anchor="middle" font-size="11" fill="#333">searchResEntry (resultados)  (frames 16 a 246)</text>
+
+  <line x1="180" y1="448" x2="533" y2="448" stroke="#b03a2e" stroke-width="2.5" marker-end="url(#mR)"/>
+  <text x="358" y="443" text-anchor="middle" font-size="11" font-weight="700" fill="#b03a2e">searchRequest domínio (atributos *)  (frame 267)</text>
+  <line x1="540" y1="470" x2="187" y2="470" stroke="#1f618d" stroke-width="2.5" marker-end="url(#mB)"/>
+  <text x="358" y="465" text-anchor="middle" font-size="10" font-weight="700" fill="#922b21">política de passwords + Domain SID  (frame 271)</text>
+
+  <line x1="180" y1="506" x2="533" y2="506" stroke="#b03a2e" stroke-width="2.5" marker-end="url(#mR)"/>
+  <text x="358" y="501" text-anchor="middle" font-size="11" font-weight="700" fill="#b03a2e">searchRequest "CN=Users" singleLevel  (frame 282)</text>
+  <line x1="540" y1="528" x2="187" y2="528" stroke="#1f618d" stroke-width="2.5" marker-end="url(#mB)"/>
+  <text x="358" y="523" text-anchor="middle" font-size="10" font-weight="700" fill="#922b21">lista de 53 utilizadores/grupos  (frames 283 a 286)</text>
+
+  <!-- nota de nao fecho -->
+  <rect x="210" y="556" width="300" height="34" rx="5" fill="#eaedef" stroke="#95a5a6" stroke-width="1.2"/>
+  <text x="360" y="577" text-anchor="middle" font-size="10.5" fill="#566573">A ligação 2 permanece aberta (sem fecho na captura)</text>
+
+  <!-- resumo seguranca -->
+  <rect x="150" y="620" width="420" height="44" rx="5" fill="#fcf3cf" stroke="#b7950b" stroke-width="1.3"/>
+  <text x="360" y="639" text-anchor="middle" font-size="11" font-weight="700" fill="#7d6608">A password viaja em claro NAS DUAS ligações (frames 4 e 12)</text>
+  <text x="360" y="656" text-anchor="middle" font-size="10" fill="#7d6608">e toda a enumeração do domínio é legível por quem capture a rede</text>
+</svg>
