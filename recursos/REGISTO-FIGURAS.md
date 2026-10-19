@@ -9,8 +9,8 @@
 | 3 | c. Operações | `cap1-diagrama-sequencia.svg` | Diagrama de sequência das operações da captura 1, em 4 fases (ligação, autenticação, consultas, encerramento). A vermelho os pedidos do cliente, a azul as respostas do servidor; indicam-se os números de frame como evidência. |
 | 4 | 2.3.1 Estabelecimento da ligação | `cap1-handshake-anotada.svg` | Handshake TCP (frames 1 a 3): SYN, SYN-ACK e ACK dirigidos à porta 389. A frame 4 marca o fim do handshake e o início do bind. A comunicação usa a porta 389 (sem cifra), não a 636 (LDAPS). |
 | 5 | 2.3.2 Autenticação (bind) | `cap1-fig5-bind.png` (versão anotada pelo Bruno) | Detalhe do bindRequest (frame 4). O campo name identifica o utilizador (Bob B. Munchies); authentication: simple indica bind simples sem cifra; o campo simple expõe a password em texto claro (!!QAZ22wsx). |
-| 5 | c. Operações (política/SID) | (screenshot frame 271 a anotar) | |
-| 6 | c. Operações (utilizadores) | (screenshot frame 283 a anotar) | |
+| 6 | 2.3.3 Consultas (política/SID) | `cap1-fig6-politica-final.png` | Resposta ao pedido de todos os atributos do domínio (frame 271). Destacam-se lockoutThreshold=0 (bloqueio de conta desativado), minPwdLength=7 e o objectSid (Domain SID), todos em texto claro. |
+| 7 | 2.3.3 Consultas (utilizadores) | `cap1-fig7-utilizadores-anotada.svg` | Enumeração de utilizadores (frame 283): resposta ao searchRequest singleLevel sobre CN=Users. O servidor devolve a lista de 53 contas e grupos do domínio (Administrator, Bob B. Munchies, Domain Admins, etc.), obtida por uma conta normal. |
 
 ## Captura 6 (SQL Slammer) — Bruno
 | Fig. | Ponto | Ficheiro | Legenda |
