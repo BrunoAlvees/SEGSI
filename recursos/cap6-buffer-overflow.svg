@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="Segoe UI, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330" font-family="Segoe UI, Arial, sans-serif">
   <defs>
     <marker id="aR" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#9E3122"/></marker>
     <marker id="aG" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#1e8449"/></marker>
@@ -42,7 +42,4 @@
   <text x="620" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#7d6608">execução desviada</text>
   <text x="620" y="298" text-anchor="middle" font-size="12" fill="#7d6608">o servidor executa o shellcode do atacante</text>
 
-  <!-- legenda base -->
-  <text x="410" y="432" text-anchor="middle" font-size="12" fill="#555">À esquerda, o funcionamento normal. À direita, o pacote grande demais transborda o buffer,</text>
-  <text x="410" y="450" text-anchor="middle" font-size="12" fill="#555">reescreve o endereço de retorno e desvia a execução para o shellcode.</text>
 </svg>
