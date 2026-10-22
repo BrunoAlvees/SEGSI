@@ -1,0 +1,6 @@
+Problema	Evidência	Mitigação
+Credenciais em claro	Password !!QAZ22wsx (frames 4 e 12)	LDAPS ou StartTLS
+Sem confidencialidade e integridade	Canal TCP/389 sem cifra	LDAP Signing and Sealing
+Enumeração do diretório	53 contas listadas (frame 283)	ACLs restritivas e monitorização
+Política e SID expostos	lockoutThreshold=0 e Domain SID (frame 271)	Ativar bloqueio de conta e cifrar o canal
+Autenticação fraca	simple bind	Kerberos ou SASL
