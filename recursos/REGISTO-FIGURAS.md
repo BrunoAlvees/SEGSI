@@ -21,3 +21,4 @@
 ## Notas
 - Figuras vetoriais em SVG (inserir diretamente no Word 2016+). PNG disponível quando necessário.
 - Regra: sem travessões (—) em legendas nem texto.
+| 3 (Word 15) | 7.3 Operações realizadas | `cap6-shellcode-anotada.svg` | Conteúdo do pacote (Follow UDP Stream). Destacam-se nomes de bibliotecas e funções do Windows embutidos no payload (kernel32, ws2_32, GetTickCount, socket, sendto), evidência de shellcode. |
