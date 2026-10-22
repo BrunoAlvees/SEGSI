@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="aR" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#9E3122"/></marker>
+  </defs>
+
+  <!-- niveis -->
+  <text x="40" y="60" font-size="12" font-weight="700" fill="#566573">1 infetado</text>
+  <text x="40" y="170" font-size="12" font-weight="700" fill="#566573">infeta vários</text>
+  <text x="40" y="300" font-size="12" font-weight="700" fill="#566573">cada um infeta mais</text>
+
+  <!-- Nivel 0: 1 maquina -->
+  <circle cx="410" cy="55" r="20" fill="#9E3122" stroke="#7a2519" stroke-width="2"/>
+  <text x="410" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+
+  <!-- Nivel 1: 3 maquinas -->
+  <circle cx="250" cy="165" r="18" fill="#c0504a" stroke="#9E3122" stroke-width="2"/>
+  <circle cx="410" cy="165" r="18" fill="#c0504a" stroke="#9E3122" stroke-width="2"/>
+  <circle cx="570" cy="165" r="18" fill="#c0504a" stroke="#9E3122" stroke-width="2"/>
+
+  <!-- Nivel 2: 9 maquinas -->
+  <g fill="#e8a39d" stroke="#c0504a" stroke-width="1.5">
+    <circle cx="190" cy="295" r="14"/><circle cx="250" cy="295" r="14"/><circle cx="310" cy="295" r="14"/>
+    <circle cx="350" cy="295" r="14"/><circle cx="410" cy="295" r="14"/><circle cx="470" cy="295" r="14"/>
+    <circle cx="510" cy="295" r="14"/><circle cx="570" cy="295" r="14"/><circle cx="630" cy="295" r="14"/>
+  </g>
+
+  <!-- setas nivel 0 -> 1 -->
+  <line x1="398" y1="72" x2="260" y2="148" stroke="#9E3122" stroke-width="1.8" marker-end="url(#aR)"/>
+  <line x1="410" y1="76" x2="410" y2="146" stroke="#9E3122" stroke-width="1.8" marker-end="url(#aR)"/>
+  <line x1="422" y1="72" x2="560" y2="148" stroke="#9E3122" stroke-width="1.8" marker-end="url(#aR)"/>
+
+  <!-- setas nivel 1 -> 2 (do centro de cada no para 3 filhos) -->
+  <g stroke="#c0504a" stroke-width="1.3" marker-end="url(#aR)">
+    <line x1="243" y1="182" x2="195" y2="282"/><line x1="250" y1="183" x2="250" y2="282"/><line x1="257" y1="182" x2="305" y2="282"/>
+    <line x1="403" y1="182" x2="355" y2="282"/><line x1="410" y1="183" x2="410" y2="282"/><line x1="417" y1="182" x2="465" y2="282"/>
+    <line x1="563" y1="182" x2="515" y2="282"/><line x1="570" y1="183" x2="570" y2="282"/><line x1="577" y1="182" x2="625" y2="282"/>
+  </g>
+
+  <!-- continua -->
+  <text x="410" y="340" text-anchor="middle" font-size="22" font-weight="700" fill="#9E3122">...</text>
+
+  <!-- legenda -->
+  <text x="410" y="375" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9E3122">O número de infetados duplica a cada poucos segundos (crescimento exponencial)</text>
+  <text x="410" y="396" text-anchor="middle" font-size="12" fill="#555">Resultado: redes saturadas e servidores em baixo. Em 2003, o mundo em cerca de 10 minutos.</text>
+</svg>

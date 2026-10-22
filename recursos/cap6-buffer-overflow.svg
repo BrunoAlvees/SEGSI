@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="aR" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#9E3122"/></marker>
+    <marker id="aG" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#1e8449"/></marker>
+  </defs>
+
+  <!-- ===== LADO ESQUERDO: NORMAL ===== -->
+  <text x="220" y="40" text-anchor="middle" font-size="15" font-weight="700" fill="#1e8449">Pedido normal (pequeno)</text>
+  <rect x="80" y="60" width="280" height="42" rx="5" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+  <text x="220" y="86" text-anchor="middle" font-size="13" fill="#1a1a1a">cabe no espaço reservado</text>
+
+  <line x1="220" y1="104" x2="220" y2="124" stroke="#1e8449" stroke-width="2" marker-end="url(#aG)"/>
+
+  <rect x="80" y="128" width="150" height="46" rx="5" fill="#ffffff" stroke="#34495e" stroke-width="2"/>
+  <text x="155" y="156" text-anchor="middle" font-size="12" fill="#566573">buffer (memória)</text>
+  <rect x="235" y="128" width="125" height="46" rx="5" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+  <text x="297" y="150" text-anchor="middle" font-size="11" fill="#1e8449">endereço de</text>
+  <text x="297" y="164" text-anchor="middle" font-size="11" fill="#1e8449">retorno (intacto)</text>
+
+  <!-- separador -->
+  <line x1="410" y1="30" x2="410" y2="400" stroke="#d5dbdb" stroke-width="1.5"/>
+
+  <!-- ===== LADO DIREITO: ATAQUE (fluxo vertical) ===== -->
+  <text x="620" y="40" text-anchor="middle" font-size="15" font-weight="700" fill="#9E3122">Pacote do worm (376 bytes)</text>
+
+  <rect x="480" y="60" width="280" height="42" rx="5" fill="#f7e4e1" stroke="#9E3122" stroke-width="2"/>
+  <text x="620" y="86" text-anchor="middle" font-size="13" fill="#1a1a1a">dados a mais + shellcode</text>
+
+  <line x1="620" y1="104" x2="620" y2="122" stroke="#9E3122" stroke-width="2.5" marker-end="url(#aR)"/>
+
+  <rect x="480" y="126" width="280" height="42" rx="5" fill="#f7e4e1" stroke="#9E3122" stroke-width="2"/>
+  <text x="620" y="152" text-anchor="middle" font-size="13" fill="#9E3122">o buffer enche e transborda</text>
+
+  <line x1="620" y1="170" x2="620" y2="188" stroke="#9E3122" stroke-width="2.5" marker-end="url(#aR)"/>
+
+  <rect x="480" y="192" width="280" height="42" rx="5" fill="#efc9c3" stroke="#9E3122" stroke-width="2.5"/>
+  <text x="620" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#9E3122">endereço de retorno REESCRITO</text>
+
+  <line x1="620" y1="236" x2="620" y2="254" stroke="#9E3122" stroke-width="2.5" marker-end="url(#aR)"/>
+
+  <rect x="480" y="258" width="280" height="50" rx="6" fill="#fcf3cf" stroke="#b7950b" stroke-width="1.8"/>
+  <text x="620" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#7d6608">execução desviada</text>
+  <text x="620" y="298" text-anchor="middle" font-size="12" fill="#7d6608">o servidor executa o shellcode do atacante</text>
+
+  <!-- legenda base -->
+  <text x="410" y="432" text-anchor="middle" font-size="12" fill="#555">À esquerda, o funcionamento normal. À direita, o pacote grande demais transborda o buffer,</text>
+  <text x="410" y="450" text-anchor="middle" font-size="12" fill="#555">reescreve o endereço de retorno e desvia a execução para o shellcode.</text>
+</svg>
