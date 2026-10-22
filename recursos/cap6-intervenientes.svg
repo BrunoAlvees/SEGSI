@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="aR" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#b03a2e"/></marker>
+  </defs>
+
+  <!-- Zona Internet (esquerda) -->
+  <rect x="20" y="60" width="330" height="230" rx="8" fill="#fbeeee" stroke="#b03a2e" stroke-width="1.5" stroke-dasharray="7,4"/>
+  <text x="40" y="82" font-size="14" font-weight="700" fill="#b03a2e">Internet (rede externa)</text>
+
+  <!-- Zona Rede local (direita) -->
+  <rect x="530" y="60" width="330" height="230" rx="8" fill="#eef4fb" stroke="#1f618d" stroke-width="1.5" stroke-dasharray="7,4"/>
+  <text x="550" y="82" font-size="14" font-weight="700" fill="#1f618d">Rede local (192.168.1.0/24)</text>
+
+  <!-- Fronteira / firewall no meio -->
+  <rect x="418" y="120" width="44" height="110" rx="5" fill="#f4f6f7" stroke="#34495e" stroke-width="2"/>
+  <line x1="428" y1="134" x2="452" y2="134" stroke="#34495e" stroke-width="2"/>
+  <line x1="428" y1="150" x2="452" y2="150" stroke="#34495e" stroke-width="2"/>
+  <line x1="428" y1="166" x2="452" y2="166" stroke="#34495e" stroke-width="2"/>
+  <line x1="428" y1="182" x2="452" y2="182" stroke="#34495e" stroke-width="2"/>
+  <text x="440" y="250" text-anchor="middle" font-size="12" font-weight="600" fill="#34495e">Firewall</text>
+  <text x="440" y="265" text-anchor="middle" font-size="12" font-weight="600" fill="#34495e">/ router</text>
+
+  <!-- Atacante (PC) -->
+  <rect x="80" y="110" width="130" height="90" rx="6" fill="#ffffff" stroke="#b03a2e" stroke-width="2.5"/>
+  <rect x="92" y="122" width="106" height="56" rx="2" fill="#f9ebea" stroke="#b03a2e" stroke-width="1.2"/>
+  <text x="145" y="157" text-anchor="middle" font-size="26">!</text>
+  <rect x="128" y="200" width="34" height="12" fill="#b03a2e"/>
+  <rect x="112" y="212" width="66" height="6" rx="3" fill="#b03a2e"/>
+  <text x="145" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">Atacante</text>
+  <text x="145" y="257" text-anchor="middle" font-size="13" fill="#b03a2e" font-weight="600">218.232.95.60</text>
+
+  <!-- Vitima (servidor SQL) -->
+  <rect x="650" y="105" width="150" height="100" rx="6" fill="#ffffff" stroke="#1f618d" stroke-width="2.5"/>
+  <rect x="664" y="119" width="122" height="22" rx="3" fill="#eef4fb" stroke="#1f618d" stroke-width="1.2"/>
+  <rect x="664" y="147" width="122" height="22" rx="3" fill="#eef4fb" stroke="#1f618d" stroke-width="1.2"/>
+  <rect x="664" y="175" width="122" height="22" rx="3" fill="#eef4fb" stroke="#1f618d" stroke-width="1.2"/>
+  <circle cx="676" cy="130" r="3" fill="#27ae60"/>
+  <circle cx="676" cy="158" r="3" fill="#27ae60"/>
+  <circle cx="676" cy="186" r="3" fill="#27ae60"/>
+  <text x="725" y="235" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">Vítima (servidor SQL)</text>
+  <text x="725" y="254" text-anchor="middle" font-size="13" fill="#1f618d" font-weight="600">192.168.1.4</text>
+
+  <!-- Seta do ataque atravessando a fronteira -->
+  <line x1="212" y1="150" x2="645" y2="150" stroke="#b03a2e" stroke-width="3" marker-end="url(#aR)"/>
+  <text x="430" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#b03a2e">1 pacote UDP para a porta 1434</text>
+  <text x="430" y="312" text-anchor="middle" font-size="12" fill="#555">Sem resposta: o atacante dispara e esquece (UDP)</text>
+</svg>

@@ -15,7 +15,8 @@
 ## Captura 6 (SQL Slammer) — Bruno
 | Fig. | Ponto | Ficheiro | Legenda |
 |---|---|---|---|
-| | | | |
+| 1 (Word 13) | 7.1 Intervenientes | `cap6-intervenientes.svg` | Intervenientes da captura 6. Um atacante na internet (218.232.95.60) envia um único pacote UDP para a porta 1434 da vítima, um servidor SQL na rede local (192.168.1.4). O pacote atravessa a fronteira (firewall/router) e não há resposta (UDP). |
+| 2 (Word 14) | 7.2 Protocolo principal | `cap6-protocolo-comparacao.svg` | O Wireshark identifica o pacote como DCERPC (Ping), de forma incorreta. Ao desligar esse dissetor, o pacote revela-se como simples datagrama UDP de 376 bytes para a porta 1434. |
 
 ## Notas
 - Figuras vetoriais em SVG (inserir diretamente no Word 2016+). PNG disponível quando necessário.
