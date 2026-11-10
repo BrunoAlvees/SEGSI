@@ -35,7 +35,7 @@ Grupo de 3 elementos. Análise de capturas Wireshark + um exercício individual 
 ## Estrutura do repositório
 ```
 SEGSI/
-├── capturas/            # as 6 capturas do trabalho
+├── capturas-SEGSI/            # as 6 capturas do trabalho
 ├── analises/            # análise de cada captura, por aluno
 │   ├── bruno/           # cap1, cap6
 │   ├── liane/
