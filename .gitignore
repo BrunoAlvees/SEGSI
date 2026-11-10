@@ -67,3 +67,10 @@ Desktop.ini
 
 # Os PDFs, relatorios e capturas de laboratorio continuam versionados.
 # Este ficheiro nao remove ficheiros ja presentes no historico Git.
+
+# Pedidos de certificado do anexo RBAC (as chaves .key já estão excluídas acima)
+*.csr
+
+# Relatório do M1 e exercício individual: guardados só localmente (já entregues)
+/M1/relatorioM1/
+/M1/ExLianeM1/
