@@ -30,7 +30,7 @@ O relatório deve ser objetivo, focado em segurança, organizado e explicar clar
 | Opção | Tema | Responsável |
 |---|---|---|
 | 1 | FreeRADIUS | Liane |
-| 2 | RADIUS federado (Windows Server 2019 / AD) | _a definir_ |
+| 2 | RADIUS federado (Windows Server 2019 / AD) | Bruno |
 | 3 | OpenLDAP | _a definir_ |
 
 ### Opção 1 – FreeRADIUS
