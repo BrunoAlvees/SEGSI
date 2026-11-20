@@ -14,6 +14,7 @@ Grupo: Bruno, Leonor, Liane
 | `docs/exercicios/`   | Guias PL01–PL11, PDFs de apoio e capturas dos exercícios                               |
 | [`M1/`](M1/README.md) | M1 – Análise de tráfego (enunciado `SEGSI_M1 _V2.pdf`, capturas `cap1`–`cap6`) |
 | [`M2/`](M2/README.md) | M2 – Authentication, Authorization and Accounting (enunciado `SEGSI-M02.pdf`)         |
+| [`M3/`](M3/README.md) | M3 – enunciado ainda por publicar (rascunho)                                             |
 
 > **Imagem do BitLocker:** o ficheiro `imgWinBitlocker (1)` (~66 MB) não está no repositório.
 > Descarregar do Moodle e colocar em `docs/exercicios/` — já está no `.gitignore`.
