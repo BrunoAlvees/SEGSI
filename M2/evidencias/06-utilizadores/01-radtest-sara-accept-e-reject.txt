@@ -1,0 +1,19 @@
+# Teste local do FreeRADIUS (segsi-linux, 2026-11-20)
+# Utilizadora local "sara" (Crypt-Password SHA-512 em mods-config/files/authorize)
+# Password real e secret omitidos.
+
+$ radtest sara '<password>' 127.0.0.1 0 '<secret>'
+Sent Access-Request Id 187 from 0.0.0.0:47100 to 127.0.0.1:1812 length 74
+        User-Name = "sara"
+        User-Password = "<omitida>"
+        NAS-IP-Address = 127.0.1.1
+        NAS-Port = 0
+Received Access-Accept Id 187 from 127.0.0.1:1812 to 127.0.0.1:47100 length 38
+        Message-Authenticator = 0x64d1009a3065b38dfd56361e6ad8781e
+
+$ radtest sara passwordErrada 127.0.0.1 0 '<secret>'
+Sent Access-Request Id 252 from 0.0.0.0:42996 to 127.0.0.1:1812 length 74
+        User-Name = "sara"
+        User-Password = "passwordErrada"
+Received Access-Reject Id 252 from 127.0.0.1:1812 to 127.0.0.1:42996 length 38
+        Message-Authenticator = 0x45a9e715f067e91459374ec7ed207b9f
