@@ -74,3 +74,9 @@ Desktop.ini
 # Relatório do M1 e exercício individual: guardados só localmente (já entregues)
 /M1/relatorioM1/
 /M1/ExLianeM1/
+
+# CIS Benchmarks: os termos de uso proibem alojar o PDF em sites de terceiros (GitHub incluido)
+CIS_*.pdf
+
+# Capturas com passwords ou secrets visiveis (tapar antes de usar)
+*TAPAR*
