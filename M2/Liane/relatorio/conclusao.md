@@ -1,0 +1,13 @@
+# 5. Conclusão
+
+Os objetivos do M2 foram cumpridos: as três opções do enunciado foram implementadas e testadas, e cada uma mostra, com evidência, quem consegue e quem não consegue aceder aos sistemas.
+
+Na **Opção 1**, o FreeRADIUS implementa as três funções AAA. A **autenticação** valida as passwords dos utilizadores Linux, a **autorização** aceita apenas os papéis User e Administrator, devolvendo o `Service-Type` correspondente, e o ***accounting*** regista as tentativas de autenticação e as sessões. Os testes com o `radtest` e o `radclient` confirmam o comportamento esperado para os nove utilizadores: sete são aceites e a Madeleine e o John são rejeitados, mesmo com a password correta. Os testes mostram também que o servidor ignora pedidos com o *secret* errado.
+
+Na **Opção 2**, o FreeRADIUS passou a autenticar utilizadores de dois repositórios: o seu ficheiro local (Sara e Abraham) e o Active Directory de um Windows Server 2019 promovido a Domain Controller (Isaac e Moses). A auditoria por GPO regista os logins recusados e as validações pedidas pelo FreeRADIUS. O endurecimento eliminou o RC4 dos tickets Kerberos e passou a exigir assinatura e cifra no LDAP, sem quebrar a ligação do Linux ao domínio. Os testes de acesso mostram quem entra e quem é recusado em cada máquina.
+
+Na **Opção 3**, o diretório OpenLDAP foi criado com o domínio do grupo, g04.segsi.mei.isep.ipp.pt, e com os grupos PU e NPU como entradas próprias (RDN). Os quatro utilizadores autenticaram-se com sucesso.
+
+As três opções deixam conclusões comuns. As **credenciais em trânsito** são o ponto mais fraco: o PAP do RADIUS só protege a password com MD5 e o *secret*, e o *bind* simples do LDAP envia-a em claro, pelo que em produção estas ligações devem ser protegidas por TLS (EAP-TTLS ou PEAP, RadSec, StartTLS ou LDAPS). **Configurar não basta, é preciso testar**: os testes negativos revelaram comportamentos que a configuração sozinha não mostrava, como a mensagem de boas-vindas numa rejeição (Opção 1) ou uma GPO sem efeito por ser sobreposta por outra (Opção 2). Por fim, o **registo** é essencial, mas deve ser detalhado o suficiente para distinguir uma tentativa de adivinhar passwords de um acesso sem permissão.
+
+Os exercícios individuais em anexo complementam o trabalho com a proteção dos sistemas e dos dados guardados. O hardening do Windows reduz a superfície de ataque, e a cifra de disco, com LUKS no Linux e BitLocker no Windows, impede que um atacante com acesso físico leia os dados, como as *hashes* das passwords e o *secret* do FreeRADIUS, que no disco sem cifra foram lidos sem qualquer credencial.
